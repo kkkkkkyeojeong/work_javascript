@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Insert title here</title>
+</head>
+<body>
+
+	<script>
+		var myArray = new Array();
+		myArray[0] = "apple";
+		myArray[99] = "banana";
+		
+		for(var i = 0; i < myArray.length; i++) {
+			console.log(myArray[i]);
+		}
+		
+		// concat()
+		var x = [1, 2, 3];
+		var y = [4, 5, 6];
+		var joined = x.concat(y);
+		
+		console.log(x);
+		console.log(joined);
+		
+		// indexOf()
+		var fruits = ["apple", "banana", "grape"];
+		console.log(fruits.indexOf("banana"));
+		
+		// Stack : push(): 마지막 뒤에 추가, pop(): 마지막부터 꺼낸다
+		// 위와 같은 방식으로 정보를 넣다 꺼내는 것을 Stack 자료구조 라 한다.
+		// LIFO : Last In First Out
+		var numbers = [1, 2, 3, 4, 5];
+		numbers.push(6);
+		console.log(numbers);
+		
+		var item = numbers.pop();
+		console.log('item: ' + item);
+		console.log(numbers);
+		
+		// Queue: shift(); 1부터(앞에서부터) 꺼내옴
+		// FIFO : First In First out
+		numbers = [1, 2, 3, 4, 5, 6, 7];
+		item = numbers.shift();
+		console.log('item: ' + item);
+		console.log(numbers);
+		numbers.push(10);
+		console.log(numbers);
+		item = numbers.shift();
+		console.log('item: ' + item);
+		
+	</script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

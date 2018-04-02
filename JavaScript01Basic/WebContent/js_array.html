@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Insert title here</title>
+</head>
+<body>
+
+	<script>
+		var i;
+		
+		// List<String> fruits = new ArrayList<>(); 와 동일 
+		var fruits = new Array();
+		fruits[0] = "Apple";
+		fruits[1] = "Banana";
+		fruits[2] = "Orange";
+		
+		for (i = 0; i < fruits.length; i++) {
+			document.write(fruits[i] + "<br>");
+		}
+		
+		// List<Object> fruits = new ArrayList<>();
+		var comp = new Array();
+		comp[0] = "Apple";		// 문자열
+		comp[1] = new Date();	// 객체
+		comp[2] = 3.14;			// 정수
+		
+		for (i=0; i < comp.length; i++) {
+			document.write(comp[i] + "<br>");
+		}
+	</script>
+
+</body>
+</html>
