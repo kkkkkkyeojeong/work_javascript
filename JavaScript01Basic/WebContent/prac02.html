@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Insert title here</title>
+</head>
+<body>
+
+	<h1>회원 신청서</h1>
+	<form>
+	<table>
+		<tr>
+			<td>이름*</td>
+			<td><input type="text" id="name"></td>		
+		</tr>
+		<tr>
+			<td>성별* </td>
+			<td>
+				<input type="radio" name="gender" value="male" checked>남성
+				<input type="radio" name="gender" value="female">여성
+			</td>		
+		</tr>
+		<tr>
+			<td>휴대폰 번호Phone*</td>
+			<td><input type="text" id="phone"></td>		
+		</tr>
+		<tr>
+			<td>이메일*</td>
+			<td><input type="text" id="email"></td>		
+		</tr>
+		<tr>
+			<td>패스워드(6-8 글자)*</td>
+			<td><input type="text" id="password01"></td>		
+		</tr>
+		<tr>
+			<td>패스워드 검증*</td>
+			<td><input type="text" id="password02"></td>		
+		</tr>
+	</table>
+		<input type="submit" value="제출" onclick="check();">
+		<input type="reset" value="지우기">
+	
+	</form>
+	
+	
+	<script>
+		
+	
+		function check() {
+			var result = name() && phone() && email() && password01() && password02();
+			
+			
+			if(result.value === "" || isNaN(result) === false) {
+				alert("이름을 입력하세요.");
+				name.focus();
+				return false;
+			}
+			else if(frm.phone.value === "" || isNaN(frm.phone.value) === true) {
+				alert("전화번호를 입력하세요.")
+				frm.phone.focus();
+				return false;
+			}
+			
+			
+			
+		}
+		
+		
+		
+		
+	</script>
+	
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
