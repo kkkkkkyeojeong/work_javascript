@@ -47,20 +47,49 @@
 		
 	
 		function check() {
-			var result = name() && phone() && email() && password01() && password02();
+			var name = document.getElementById("name");
+			var phone = document.getElementById("phone");
+			var email = document.getElementById("email");
+			var password01 = document.getElementById("password01");
+			var password02 = document.getElementById("password02");
+			
+			var exp1 = /[a-z0-9]{2,}@[a-z0-9-]{2,}\.[a-z0-9]{2,}/i;
+			var exp2 = /^[a-zA-Z0-9]{4,12}$/;
 			
 			
-			if(result.value === "" || isNaN(result) === false) {
+			if(name.value === "" || isNaN(name.value) === false) {
 				alert("이름을 입력하세요.");
 				name.focus();
 				return false;
 			}
-			else if(frm.phone.value === "" || isNaN(frm.phone.value) === true) {
-				alert("전화번호를 입력하세요.")
-				frm.phone.focus();
+			else if(phone.value === "" || isNaN(phone.value) === true) {
+				alert("전화번호를 입력하세요.");
+				phone.focus();
 				return false;
 			}
-			
+			else if(!(email.value.match(exp1))) {
+				alert("이메일을 입력하세요.");
+				email.focus();
+				return false;
+			}
+			else if(!(password01.value.match(exp2)) || password01.value === ""
+					|| password01.value.length < 6 || password01.value.length > 8) {
+				alert("비밀번호를 입력하세요.")
+				password01.focus();
+				return false;
+			} 
+			else if(!(password02.value.match(exp2)) || password02.value === ""
+					|| password02.value.length < 6 || password02.value.length > 8) {
+				alert("비밀번호를 입력하세요.")
+				password02.focus();
+				return false;
+			} 
+			else if(!(password01.value === password02.value)) {
+				alert("비밀번호가 다릅니다.")
+				password01.focus();
+				return false;
+			} 
+		
 			
 			
 		}
