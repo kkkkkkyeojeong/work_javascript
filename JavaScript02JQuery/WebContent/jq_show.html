@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Insert title here</title>
+</head>
+<body>
+	<button id="btnshow">Show it</button>
+	<button id="btntoggle">toggle</button>
+	<button id="btnanimate">animate</button>
+	
+	<img id="bob" src="booob.jpg" alt="" width="520" height="500" style="display: none">
+	<img id="bob02" src="booob.jpg" alt="" width="520" height="500" style="display: relative">
+
+
+	<script src="js/jquery-3.3.1.js"></script>
+	<script>
+		$(document).ready(function () {
+			$("#btnshow").click(function() {
+				$("#bob").show("slow");
+			});
+			
+			$("#btntoggle").click(function() {
+				$("#bob").toggle();
+			});
+			
+			$("#btnanimate").click(function() {
+				$("#bob02").animate({ 
+					left: '100px',
+					opacity: '0.5',
+					width: '150px',
+					});
+			});
+		});
+		
+		
+	</script>
+
+</body>
+</html>

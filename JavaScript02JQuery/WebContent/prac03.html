@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Insert title here</title>
+</head>
+<body>
+	<div>
+		<button id="btn1" > << </button>
+		<button id="btn2" > >> </button>
+	</div>
+	<img src="minion.jpg" id="mini" alt="" width="520" height="500" style="display: relative">
+
+	<script src="js/jquery-3.3.1.js"></script>
+	
+	<script>
+		$(document).ready(function() {
+			$("#btn2").click(function() {
+				$("#mini").animate({ 
+					left: '100px'
+					
+				});
+			});
+		});
+
+	</script>
+</body>
+</html>
