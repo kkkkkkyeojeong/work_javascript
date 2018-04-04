@@ -9,17 +9,22 @@
 		<button id="btn1" > << </button>
 		<button id="btn2" > >> </button>
 	</div>
-	<img src="minion.jpg" id="mini" alt="" width="520" height="500" style="display: relative">
+	
+	<img src="booob.jpg" id="bob" alt="" width="520" height="500" style="display: relative">
 
 	<script src="js/jquery-3.3.1.js"></script>
 	
 	<script>
 		$(document).ready(function() {
-			$("#btn2").click(function() {
-				$("#mini").animate({ 
-					left: '100px'
+			$("#btn1").click(function() {
+				$("#bob").animate({ 
+					right: '100px'
 					
 				});
+			});
+			
+			$("#btn2").click(function() {
+				$("#bob").animate({left: '250px'});
 			});
 		});
 
