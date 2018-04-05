@@ -10,21 +10,18 @@
 		<button id="btn2" > >> </button>
 	</div>
 	
-	<img src="booob.jpg" id="bob" alt="" width="520" height="500" style="display: relative">
+	<img src="booob.jpg" id="bob" alt="" width="220" height="200" style="display: relative; position: absolute;">
 
 	<script src="js/jquery-3.3.1.js"></script>
 	
 	<script>
 		$(document).ready(function() {
 			$("#btn1").click(function() {
-				$("#bob").animate({ 
-					right: '100px'
-					
-				});
+				$("#bob").animate({left: '0px'});
 			});
-			
+
 			$("#btn2").click(function() {
-				$("#bob").animate({left: '250px'});
+				$("#bob").animate({left: '500px'});
 			});
 		});
 

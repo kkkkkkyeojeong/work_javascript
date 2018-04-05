@@ -3,19 +3,26 @@
 <head>
 	<meta charset="utf-8">
 	<title>Insert title here</title>
+	<style>
+		#target2 { 
+			background-color: yellow;
+			border: 1px solid red; 
+		}
+	</style>
 </head>
 <body>
 	<div>
-		<input type="text" id="target" value="">
+		<input type="text" id="target1" value="">
 	</div>
-	<div id="text"></div>
+	
+	<div id="target2"></div>
 
 	<script src="js/jquery-3.3.1.js"></script>
 	
 	<script>
 		$(document).ready(function() {
-			$("#text").text(function() {
-				$("#target").val();
+			$("#target1").keyup(function() {
+				$("#target2").text($("#target1").val());
 			});
 		});
 	</script>
